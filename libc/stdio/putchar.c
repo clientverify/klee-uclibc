@@ -5,6 +5,7 @@
  * Dedicated to Toni.  See uClibc/DEDICATION.mjn3 for details.
  */
 
+#ifdef KLEE_SYM_PRINTF
 #include "_stdio.h"
 
 libc_hidden_proto(__fputc_unlocked)
@@ -41,4 +42,5 @@ int putchar(int c)
 	}
 }
 
+#endif
 #endif
