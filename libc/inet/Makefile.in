@@ -16,7 +16,7 @@ CSRC +=	inet_aton.c inet_addr.c inet_ntoa.c inet_makeaddr.c inet_lnaof.c \
 	inet_netof.c
 
 # multi source resolv.c
-# CSRC +=	encodeh.c decodeh.c encoded.c decoded.c lengthd.c encodeq.c \
+CSRC +=	encodeh.c decodeh.c encoded.c decoded.c lengthd.c encodeq.c \
 	decodeq.c lengthq.c encodea.c decodea.c \
 	dnslookup.c resolveaddress.c opennameservers.c \
 	closenameservers.c resolvename.c gethostbyname.c res_init.c \
