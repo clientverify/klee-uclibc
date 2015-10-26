@@ -296,6 +296,11 @@ libc_hidden_def(sgetspent_r)
 
 libc_hidden_proto(getpwuid_r)
 
+/* When using KLEE, this implementation of getpwuid is broken.  We disable it
+ * and let an external call be made, after which we must import the 'result'
+ * memory block into the bitcode address space.
+ */
+/*
 struct passwd *getpwuid(uid_t uid)
 {
 	static char buffer[__UCLIBC_PWD_BUFFER_SIZE__];
@@ -305,6 +310,7 @@ struct passwd *getpwuid(uid_t uid)
 	getpwuid_r(uid, &resultbuf, buffer, sizeof(buffer), &result);
 	return result;
 }
+*/
 
 #endif
 /**********************************************************************/
